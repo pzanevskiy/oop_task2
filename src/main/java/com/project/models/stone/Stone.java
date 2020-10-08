@@ -2,9 +2,10 @@ package com.project.models.stone;
 
 import com.project.enums.Color;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class Stone {
+public abstract class Stone implements Serializable {
 
     private String name;
     private double price;

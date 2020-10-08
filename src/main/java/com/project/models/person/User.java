@@ -4,18 +4,19 @@ import com.project.models.stone.Stone;
 import com.project.service.interfaces.IPrinter;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class User extends Person {
 
     private double cash;
-    private ArrayList<Stone> stones=new ArrayList<>();
+    private List<Stone> stones=new ArrayList<>();
 
-    public ArrayList<Stone> getStones() {
+    public List<Stone> getStones() {
         return stones;
     }
 
-    public void setStones(ArrayList<Stone> stones) {
+    public void setStones(List<Stone> stones) {
         this.stones = stones;
     }
 
