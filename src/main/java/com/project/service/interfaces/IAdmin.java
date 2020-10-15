@@ -5,6 +5,7 @@ import com.project.models.person.Admin;
 import com.project.models.person.User;
 import com.project.models.stone.Stone;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -18,4 +19,6 @@ public interface IAdmin {
     void removeStoneFromList(List<Stone> stones, int id);
     List<Stone> addStoneToList(List<Stone> stones, Stone stone);
     double calculateTotalPrice(List<Stone> stones);
+    void serializeStones(List<Stone> stones);
+
 }

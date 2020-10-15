@@ -7,6 +7,7 @@ import com.project.models.person.User;
 import com.project.models.stone.Diamond;
 import com.project.models.stone.Emerald;
 import com.project.models.stone.Stone;
+import com.project.service.Serialization;
 import com.project.service.interfaces.IAdmin;
 import com.project.service.interfaces.IPrinter;
 
@@ -74,5 +75,14 @@ public class AdminService implements IAdmin {
         users.put(2,new User("ivan","ivanov","imail","ipass",1500));
         users.put(3,new User("petr","petrov","pmail","ppass",2500));
         return users;
+    }
+
+    @Override
+    public void serializeStones(List<Stone> stones) {
+        if(stones==null){
+            throw new NullPointerException("Empty List");
+        }
+        Serialization.serializeStones(stones);
+        System.out.println("Stones has");
     }
 }
